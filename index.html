@@ -3,79 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Muhammad Subhan Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom CSS for additional styling */
+        .nav-link:hover {
+            color: #3b82f6; /* Tailwind's blue-500 */
+            border-bottom: 2px solid #3b82f6;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            height: 20rem; /* Fixed height */
+            object-fit: cover; /* Ensures image covers the container */
+        }
+
+        .contact-form input, .contact-form textarea {
+            transition: border-color 0.3s ease-in-out;
+        }
+
+        .contact-form input:focus, .contact-form textarea:focus {
+            border-color: #3b82f6;
+        }
+    </style>
 </head>
-<body>
-    <!-- navbar section  -->
+<body class="bg-gray-100 text-gray-800">
 
-     <nav class="bg-neutral-950 text-yellow-300 flex justify-end w-full h-16 items-center">
-        <ul class="text-xl inline-flex gap-8 m-10 underline">
-            <li class=" hover:bg-white  p-2">Home</li>
-            <li class="hover:bg-white p-2">About</li>
-            <li class="hover:bg-white p-2">Projects</li>
-            <li class="hover:bg-white p-2">Footer</li>
-
-        </ul>
-     </nav>
-
-     <!--Hero Section  -->
-     <section class="w-full h-screen bg-slate-200 flex items-center justify-center py-12 px-6">
-        <div class="container mx-auto flex flex-col md:flex-row items-center gap-8">
-          <!-- Text Section -->
-          <div class="text-center md:text-left md:w-1/2">
-            <h1 class="text-5xl font-bold mb-4">
-              I'm Muhammad <span class="underline text-blue-500">Subhan</span>
-            </h1>
-            <p class="text-lg mb-6">
-              I am a Software Engineer with a strong focus on front-end development. Known for my expertise in creating engaging and intuitive user interfaces, I am currently navigating the complexities of backend development to become a more well-rounded developer. My commitment to learning and growth drives me to tackle new challenges head-on and continuously enhance my skill set.
-            </p>
-            <a href="#portfolio" class="inline-block px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 transition">
-              View My Work
-            </a>
-            
-            <!-- Social Icons Section -->
-            <div class="flex justify-center md:justify-start gap-6 mt-8">
-              <a href="mailto:muhammadsubhan8934@gmail.com" class="text-blue-600 hover:text-blue-800 transition">
-                <i class="fas fa-envelope fa-2x"></i>
-              </a>
-              <a href="https://github.com/mu-subhan" target="_blank" class="text-gray-800 hover:text-gray-600 transition">
-                <i class="fab fa-github fa-2x"></i>
-              </a>
-              <a href="https://www.linkedin.com/in/muhammad-subhan-321821231/" target="_blank" class="text-blue-700 hover:text-blue-900 transition">
-                <i class="fab fa-linkedin fa-2x"></i>
-              </a>
-            </div>
-          </div>
-          
-          <!-- Image Section -->
-          <div class="w-80 h-80 md:w-1/2 md:h-auto flex justify-center items-center">
-            <img src="images/subhan.jpg" alt="Muhammad Subhan" class="rounded-full shadow-lg object-cover w-full h-full" />
-          </div>
+    <!-- Navbar Section -->
+    <nav class="bg-white/70 backdrop-blur-md text-blue-500 fixed top-0 w-full h-16 flex items-center z-50 shadow-md">
+        <div class="container mx-auto flex justify-end">
+            <ul class="text-xl flex gap-8 m-5">
+                <li class="nav-link hover:underline p-2"><a href="#home">Home</a></li>
+                <li class="nav-link hover:underline p-2"><a href="#about">About</a></li>
+                <li class="nav-link hover:underline p-2"><a href="#projects">Projects</a></li>
+                <li class="nav-link hover:underline p-2"><a href="#footer">Footer</a></li>
+            </ul>
         </div>
-      </section>
+    </nav>
 
-      <!-- Projects section  -->
-      <section class="max-w-[1200px] mx-auto">
-        <h1 class="text-4xl text-center py-5">
-          Projects Detailed
-        </h1>
-        <div class="max-w-[1200px] mx-auto grid grid-cols-3 md:grid-cols-2 gap-6 py-[20px]">
-          <div class="text-center shadow-2xl rounded-lg">
-            <div class="overflow-hidden">
-            <img src="images/e-commerce.png" alt="e-commerce card" class="hover:scale-125 duration-1000">
+    <!-- Hero Section -->
+    <section id="home" class="w-full h-screen bg-gray-200 flex items-center justify-center py-12 px-6">
+        <div class="container mx-auto flex flex-col md:flex-row items-center gap-8 mt-10">
+            <!-- Text Section -->
+            <div class="text-center md:text-left md:w-1/2">
+                <h1 class="text-6xl font-bold mb-4 text-blue-900">
+                    I'm Muhammad <span class="underline text-blue-600">Subhan</span>
+                </h1>
+                <p class="text-lg mb-6 text-gray-700">
+                    I am a Software Engineer with a strong focus on front-end development. Known for my expertise in creating engaging and intuitive user interfaces, I am currently navigating the complexities of backend development to become a more well-rounded developer.
+                </p>
+                <a href="#projects" class="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition">
+                    View My Work
+                </a>
+                <!-- Social Icons Section -->
+                <div class="flex justify-center md:justify-start gap-6 mt-8">
+                    <a href="mailto:muhammadsubhan8934@gmail.com" class="text-blue-600 hover:text-blue-800 transition">
+                        <i class="fas fa-envelope fa-2x"></i>
+                    </a>
+                    <a href="https://github.com/mu-subhan" target="_blank" class="text-gray-800 hover:text-gray-600 transition">
+                        <i class="fab fa-github fa-2x"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/muhammad-subhan-321821231/" target="_blank" class="text-blue-700 hover:text-blue-900 transition">
+                        <i class="fab fa-linkedin fa-2x"></i>
+                    </a>
+                </div>
             </div>
-            <h3 class="py-3 text-3xl">
-              Products things
-            </h3>
-          </div>
+            <!-- Image Section -->
+            <div class="w-80 h-80 md:w-1/2 md:h-auto flex justify-center items-center">
+                <img src="images/subhan.jpg" alt="Muhammad Subhan" class="rounded-full shadow-lg object-cover w-full h-full" />
+            </div>
         </div>
-       
     </section>
-    
-    
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+      <div class="container mx-auto flex flex-col md:flex-row gap-12">
+          <!-- Left Side: Education and Personal Information -->
+          <div class="md:w-1/2 text-left">
+              <h2 class="text-4xl font-bold text-blue-800 mb-6">About Me</h2>
+              <p class="text-lg text-gray-600 mb-4">
+                  I am passionate about software development and eager to contribute to impactful projects. Whether it's front-end, back-end, or full-stack development, I am always ready to take on new challenges and learn from them.
+              </p>
+              <h3 class="text-3xl font-semibold text-blue-700 mb-4">Education</h3>
+              <div class="space-y-4 text-gray-700">
+                  <div>
+                      <h4 class="text-2xl font-semibold">BSIT, University of Education (2021-2025)</h4>
+                      <p class="text-lg">Currently pursuing my Bachelor's degree in Information Technology. I've been learning and working on various projects that enhance my skills in software development, with a strong focus on front-end technologies and user experience design.</p>
+                  </div>
+                  <div>
+                      <h4 class="text-2xl font-semibold">Intermediate in I.C.S (2019-2021)</h4>
+                      <p class="text-lg">Completed my Intermediate education with a specialization in Computer Science, where I developed a solid foundation in programming and problem-solving skills.</p>
+                  </div>
+                  <div>
+                      <h4 class="text-2xl font-semibold">Matric in Computer Science (2017-2019)</h4>
+                      <p class="text-lg">Achieved my Matriculation with a focus on Computer Science, which sparked my interest in the field of technology and led me to pursue further studies in IT.</p>
+                  </div>
+              </div>
+          </div>
+  
+          <!-- Right Side: Contact Form -->
+          <!-- <div class="md:w-1/2 text-left">
+              <div class="max-w-md mx-auto">
+                  <form action="mailto:muhammadsubhan8934@gmail.com" method="POST" enctype="text/plain" class="contact-form space-y-6">
+                      <input type="text" name="name" placeholder="Your Name" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-600">
+                      <input type="email" name="email" placeholder="Your Email" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-600">
+                      <textarea name="message" placeholder="Your Message" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-600"></textarea>
+                      <button type="submit" class="w-full px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition">Send Message</button>
+                  </form>
+              </div>
+          </div>
+      </div> -->
+  </section>
+  
+
+    <!-- Projects Section -->
+    <section id="projects" class="max-w-[1200px] mx-auto py-16">
+        <h2 class="text-4xl text-center py-5 font-bold text-blue-800">Projects Detailed</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 py-8">
+            <!-- Project Card -->
+            <div class="card bg-white rounded-lg overflow-hidden shadow-lg transform transition-transform duration-300 hover:scale-105">
+                <img src="images/google-note.png" alt="E-Commerce" class="w-full h-80 object-cover">
+                <div class="p-6">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-2">E-Commerce</h3>
+                    <p class="text-gray-600">Products and things</p>
+                </div>
+            </div>
+            <!-- Project Card -->
+            <div class="card bg-white rounded-lg overflow-hidden shadow-lg transform transition-transform duration-300 hover:scale-105">
+                <img src="images/password-genrate.png" alt="Password Generate" class="w-full h-80 object-cover">
+                <div class="p-6">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-2">Password Generate</h3>
+                    <p class="text-gray-600">Generate secure passwords</p>
+                </div>
+            </div>
+            <!-- Project Card -->
+            <div class="card bg-white rounded-lg overflow-hidden shadow-lg transform transition-transform duration-300 hover:scale-105">
+                <img src="images/advanture-awaits.png" alt="Adventure Awaits" class="w-full h-80 object-cover">
+                <div class="p-6">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-2">Adventure Awaits</h3>
+                    <p class="text-gray-600">Explore the world</p>
+                </div>
+            </div>
+            <!-- Add more project cards here -->
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="footer" class="bg-blue-900 text-white py-6">
+        <div class="container mx-auto text-center">
+            <p class="text-lg">&copy; 2024 Muhammad Subhan. All Rights Reserved.</p>
+        </div>
+    </footer>
+
 </body>
 </html>
