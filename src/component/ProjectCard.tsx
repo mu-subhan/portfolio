@@ -13,6 +13,7 @@ interface ProjectCardProps {
   type: string;
   highlights: string[];
   index: number;
+  caseStudyId?: string;
 }
 
 export default function ProjectCard({ 
@@ -24,6 +25,7 @@ export default function ProjectCard({
   imageUrl, 
   type,
   highlights,
+  caseStudyId,
 }: ProjectCardProps) {
   return (
     <motion.div
@@ -110,21 +112,37 @@ export default function ProjectCard({
 
         {/* Action Links */}
         <div className="flex items-center justify-between pt-4 border-t border-slate-100">
-          <motion.a
-            href={link}
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ x: 5 }}
-            className="flex items-center gap-2 text-blue-600 hover:text-blue-700 font-semibold text-sm transition-all duration-200 group/link"
-          >
-            <span>View Live Demo</span>
-            <FiArrowUpRight 
-              size={16} 
-              className="group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" 
-            />
-          </motion.a>
+          <div className="flex items-center gap-3">
+            <motion.a
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ x: 5 }}
+              className="flex items-center gap-2 text-blue-600 hover:text-blue-700 font-semibold text-sm transition-all duration-200 group/link"
+            >
+              <span>View Live Demo</span>
+              <FiArrowUpRight 
+                size={16} 
+                className="group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" 
+              />
+            </motion.a>
 
-          {/* Additional action - GitHub link would go here if available */}
+            {caseStudyId && (
+              <motion.a
+                href={`/case-study/${caseStudyId}`}
+                whileHover={{ x: 5 }}
+                className="flex items-center gap-2 text-purple-600 hover:text-purple-700 font-semibold text-sm transition-all duration-200 group/case"
+              >
+                <span>Case Study</span>
+                <FiArrowUpRight 
+                  size={16} 
+                  className="group-hover/case:translate-x-0.5 group-hover/case:-translate-y-0.5 transition-transform" 
+                />
+              </motion.a>
+            )}
+          </div>
+
+          {/* GitHub link */}
           <motion.a
             href={githubLink}
             target="_blank"

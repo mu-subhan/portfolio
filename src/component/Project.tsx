@@ -1,39 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
 import ProjectCard from './ProjectCard';
-
-const projects = [
-  {
-    title: "AI-Powered Volunteer Matching System",
-    description: "This platform leverages machine learning to optimize how volunteers are assigned to roles, ensuring better fit, higher engagement, and improved efficiency. The system analyzes user profiles, skillsets, and availability using a TensorFlow-based model. Built with a modern web stack, the platform supports real-time insights and a seamless user experience.",
-    tags: ["React", "Node.js", "PostgreSQL", "Machine Learning", "Vercel", ],
-    imageUrl: "/Event-Management.PNG",
-    link: "https://event-management-system-9qnx.vercel.app/",
-    githubLink: "https://github.com/mu-subhan/Event-Management-System",
-    type: "Full-Stack Application",
-    highlights: ["ML Algorithm", "TensorFlow", "Real-time Analytics"]
-  },
-  {
-    title: "Cloudly Storage",
-    description: "Developed a cloud-based storage platform that allows users to securely upload, edit, delete, and share files in real-time. The system is designed with a distributed architecture for scalability and includes advanced security protocols to ensure data integrity and privacy.",
-    tags: ["Next.js", "TypeScript", "Appwrite", "Redis",],
-    imageUrl: "/Cloudly-store.PNG",
-    link: "https://cloudly-store.vercel.app/",
-    githubLink: "https://github.com/mu-subhan/Google-Drive-Clone",
-    type: "Cloud Infrastructure",
-    highlights: ["Distributed System", "Real-time Sync", "Enterprise Security"]
-  },
-  {
-    title: "XORA Design",
-    description: "A modern, responsive landing page cloned from the XORA project. This page showcases a clean UI, reusable components, and a performance-optimized layout ideal for marketing and product promotion. Built with accessibility in mind and optimized for all screen sizes.",
-    tags: ["Next.js", "TypeScript", "Performance Optimization"],
-    imageUrl: "/xora.PNG",
-    link: "https://xora-landing-page-kappa.vercel.app/",
-    githubLink: "https://github.com/mu-subhan/Xora-Landing-Page",
-    type: "Frontend Architecture",
-    highlights: ["Design System", "Performance", "Accessibility"]
-  },
-];
+import { caseStudies } from '@/data/caseStudies';
 
 export default function Projects() {
   const containerVariants = {
@@ -109,11 +77,11 @@ export default function Projects() {
           viewport={{ once: true, margin: "-50px" }}
           className="grid md:grid-cols-2 xl:grid-cols-3 gap-8 lg:gap-10"
         >
-          {projects.map((project, index) => (
+          {caseStudies.map((project, index) => (
             <motion.div key={index} variants={itemVariants}>
               <ProjectCard
                 title={project.title}
-                description={project.description}
+                description={project.shortDescription}
                 tags={project.tags}
                 link={project.link}
                 githubLink={project.githubLink}
@@ -121,6 +89,7 @@ export default function Projects() {
                 type={project.type}
                 highlights={project.highlights}
                 index={index}
+                caseStudyId={project.id}
               />
             </motion.div>
           ))}

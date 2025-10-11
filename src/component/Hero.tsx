@@ -62,23 +62,21 @@ export default function Hero() {
               </div>
             </motion.div>
 
-            <motion.h1 
-              variants={itemVariants}
-              className="text-4xl md:text-5xl xl:text-6xl font-bold leading-[1.1] mb-6 text-slate-900"
-            >
-             Elevate Your Business{' '}
-              <span className="relative">
-                <span className="text-blue-600">with Scalable Tech</span>
-                <motion.div
-                  className="absolute -bottom-2 left-0 right-0 h-1 bg-blue-200/60 rounded-full"
-                  initial={{ scaleX: 0 }}
-                  animate={{ scaleX: 1 }}
-                  transition={{ delay: 0.8, duration: 0.8 }}
-                />
-              </span>
-              
-            </motion.h1>
-
+          <motion.h1 
+  variants={itemVariants}
+  className="text-4xl md:text-5xl xl:text-4xl font-bold leading-[1.1] mb-6 text-slate-900"
+>
+  The Art of Scalability :{' '}
+  <span className="relative">
+    <span className="text-blue-600">Engineering for Tomorrow</span>
+    <motion.div
+      className="absolute -bottom-2 left-0 right-0 h-1 bg-blue-200/60 rounded-full"
+      initial={{ scaleX: 0 }}
+      animate={{ scaleX: 1 }}
+      transition={{ delay: 0.8, duration: 0.8 }}
+    />
+  </span>
+</motion.h1>
             <motion.div variants={itemVariants} className="space-y-4 mb-8">
               <h2 className="text-xl md:text-2xl text-slate-700 font-semibold">
                 Muhammad Subhan
@@ -198,35 +196,9 @@ export default function Hero() {
                 </div>
               </div>
 
-              {/* Floating Elements */}
-              <motion.div
-                className="absolute -top-4 -right-4 w-20 h-20 bg-blue-500/10 rounded-full flex items-center justify-center backdrop-blur-sm border border-blue-200"
-                animate={{ y: [-10, 10, -10] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              >
-                <div className="text-2xl">⚡</div>
-              </motion.div>
-
-              <motion.div
-                className="absolute -bottom-4 -left-4 w-16 h-16 bg-slate-500/10 rounded-full flex items-center justify-center backdrop-blur-sm border border-slate-200"
-                animate={{ y: [10, -10, 10] }}
-                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-              >
-                <div className="text-xl">💻</div>
-              </motion.div>
-              <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-end">
-   {/* <Link
-   href='/experience'
-   className='bg-slate-900 hover:bg-slate-800 text-white px-6 py-3 rounded-lg transition-all duration-300 font-semibold shadow-lg hover:shadow-xl flex items-center justify-center gap-2'>
-     View Experience
-   </Link>
-    <Link
-    href='my-story'
-    className='group flex items-center justify-center gap-2 border-2 border-slate-300 hover:border-slate-900 px-8 py-4 rounded-lg transition-all duration-300 text-slate-700 hover:text-slate-900 font-semibold hover:bg-slate-50'
-    >
-      About My Journey
-    </Link>*/}
-  </div> 
+             
+             
+              
             </div>
           </motion.div>
         </div>
