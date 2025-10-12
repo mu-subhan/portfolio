@@ -40,16 +40,16 @@ export const caseStudies: CaseStudy[] = [
   {
     id: "ai-volunteer-matching",
     title: "AI-Powered Volunteer Matching System",
-    description: "This platform leverages machine learning to optimize how volunteers are assigned to roles, ensuring better fit, higher engagement, and improved efficiency. The system analyzes user profiles, skillsets, and availability using a TensorFlow-based model. Built with a modern web stack, the platform supports real-time insights and a seamless user experience.",
+    description:"This platform leverages machine learning to optimize how volunteers are assigned to roles, ensuring better fit, higher engagement, and improved efficiency. The system analyzes user profiles, skillsets, and availability using a TensorFlow-based model. Built with a modern web stack, the platform supports real-time insights and a seamless user experience.",
     shortDescription: "ML-powered platform for optimizing volunteer role assignments with TensorFlow and real-time analytics.",
-    tags: ["React", "Node.js", "PostgreSQL", "Machine Learning", "Vercel"],
+    tags: ["React","Node.js","PostgreSQL","Machine Learning","Vercel"],
     imageUrl: "/Event-Management.PNG",
     link: "https://event-management-system-9qnx.vercel.app/",
     githubLink: "https://github.com/mu-subhan/Event-Management-System",
     type: "Full-Stack Application",
-    highlights: ["ML Algorithm", "TensorFlow", "Real-time Analytics"],
-    timeline: "3 months",
-    role: "Full-Stack Developer & ML Engineer",
+    highlights: ["ML Algorithm","TensorFlow","Real-time Analytics"],
+    timeline: "1 months",
+    role: "Frontend Developer & ML Engineer",
     teamSize: "Solo Project",
     challenge: "Traditional volunteer matching systems rely on manual processes and basic keyword matching, leading to poor volunteer-role fit, low engagement rates, and inefficient resource allocation. Organizations struggle to match volunteers with appropriate roles based on their skills, availability, and interests.",
     solution: "Developed an intelligent matching system that uses machine learning algorithms to analyze volunteer profiles, skills, availability, and preferences. The system employs collaborative filtering and content-based recommendations to suggest optimal role matches, significantly improving engagement and satisfaction.",
@@ -133,8 +133,8 @@ export const caseStudies: CaseStudy[] = [
     githubLink: "https://github.com/mu-subhan/Google-Drive-Clone",
     type: "Cloud Infrastructure",
     highlights: ["Distributed System", "Real-time Sync", "Enterprise Security"],
-    timeline: "4 months",
-    role: "Full-Stack Developer & DevOps Engineer",
+    timeline: "1 months",
+    role: "Full-Stack Developer",
     teamSize: "Solo Project",
     challenge: "Existing cloud storage solutions often lack real-time collaboration features, have limited scalability, and don't provide adequate security controls for enterprise users. Users need a platform that combines the simplicity of consumer cloud storage with the robustness required for business use.",
     solution: "Built a comprehensive cloud storage platform using Appwrite for backend services and Redis for real-time synchronization. The platform features advanced file management, collaborative editing, and enterprise-grade security with role-based access controls.",
@@ -208,89 +208,94 @@ export const caseStudies: CaseStudy[] = [
     ]
   },
   {
-    id: "xora-design",
-    title: "XORA Design",
-    description: "A modern, responsive landing page cloned from the XORA project. This page showcases a clean UI, reusable components, and a performance-optimized layout ideal for marketing and product promotion. Built with accessibility in mind and optimized for all screen sizes.",
-    shortDescription: "Modern, responsive landing page with clean UI, performance optimization, and accessibility focus.",
-    tags: ["Next.js", "TypeScript", "Performance Optimization"],
-    imageUrl: "/xora.PNG",
-    link: "https://xora-landing-page-kappa.vercel.app/",
-    githubLink: "https://github.com/mu-subhan/Xora-Landing-Page",
-    type: "Frontend Architecture",
-    highlights: ["Design System", "Performance", "Accessibility"],
-    timeline: "2 months",
-    role: "Frontend Developer & UI/UX Designer",
+    id:"Library-Management-System",
+    title: "Library Management System",
+    description: "A comprehensive library management system that streamlines book inventory, member management, and borrowing processes. The system features a user-friendly interface, real-time search capabilities, and automated notifications for due dates and overdue books.", 
+    shortDescription: "Streamlined library management with real-time search, inventory tracking, and automated notifications.",
+    tags: ["Nextjs", "Node.js", "PostgreSQL","Express", "Vercel","upstash"],
+    imageUrl: "/lms2.PNG",
+    link: "https://university-library-puce-three.vercel.app/",
+    githubLink: "https://github.com/mu-subhan/University-Library-Management-System",
+    type: "Full-Stack Application",
+    highlights: ["Inventory Tracking", "Real-time Search", "Automated Notifications"],
+    timeline: "1 month",
+    role: "Full-Stack Developer",
     teamSize: "Solo Project",
-    challenge: "Creating a high-converting landing page requires balancing visual appeal with performance optimization. The challenge was to recreate the XORA design while ensuring fast loading times, excellent accessibility, and responsive design across all devices.",
-    solution: "Developed a pixel-perfect recreation of the XORA landing page using Next.js and TypeScript, implementing advanced performance optimizations including image optimization, code splitting, and lazy loading. The design system ensures consistency and maintainability.",
+    challenge: "Traditional library management systems often rely on manual processes and outdated software, leading to inefficiencies in book tracking, member management, and borrowing processes. Libraries need a modern solution that enhances user experience and operational efficiency.",
+    solution: "Developed a web-based library management system using Next.js for the frontend and Node.js with Express for the backend. The system includes features such as real-time book search, inventory tracking, member management, and automated email notifications for due dates and overdue books.",
     process: [
       {
-        title: "Design Analysis",
-        description: "Analyzed the original XORA design and created implementation plan",
+        title: "Requirement Gathering",
+        description: "Identified key features and user needs",
         steps: [
-          "Studied original design patterns and components",
-          "Identified key performance optimization opportunities",
-          "Created component hierarchy and design system",
-          "Planned responsive breakpoints and interactions"
-        ]
-      },
-      {
-        title: "Component Development",
-        description: "Built reusable components with performance optimization",
-        steps: [
-          "Created atomic design components with TypeScript",
-          "Implemented responsive design with Tailwind CSS",
-          "Added smooth animations with Framer Motion",
-          "Optimized images and assets for web delivery"
-        ]
-      },
-      {
-        title: "Performance Optimization",
-        description: "Implemented advanced performance techniques",
-        steps: [
-          "Set up Next.js Image optimization",
-          "Implemented code splitting and lazy loading",
-          "Optimized bundle size and loading times",
-          "Added performance monitoring and analytics"
-        ]
-      },
-      {
-        title: "Accessibility & Testing",
-        description: "Ensured accessibility compliance and cross-browser compatibility",
-        steps: [
-          "Implemented ARIA labels and semantic HTML",
-          "Added keyboard navigation support",
-          "Tested across different browsers and devices",
-          "Conducted accessibility audits and improvements"
+          "Conducted interviews with librarians and staff",
+          "Analyzed existing library management systems",
+          "Defined user roles and permissions",
+          "Created feature list and project roadmap"
         ]
       }
+      ,{
+        title: "Frontend Development",
+        description: "Built responsive user interface",
+        steps: [
+          "Developed Next.js application with TypeScript",
+          "Created user interface with responsive design",
+          "Implemented real-time search functionality",
+          "Integrated with backend API for data retrieval"
+        ]
+      },
+      {
+        title: "Backend Development",
+        description: "Implemented server-side logic and database integration",
+        steps: [
+          "Developed RESTful API with Node.js and Express",
+          "Integrated PostgreSQL database for data storage",
+          "Implemented user authentication and authorization",
+          "Created automated tests for API endpoints"
+        ]
+      },
+      {
+        title: "Deployment & Testing",
+        description: "Deployed application and conducted user testing",
+        steps: [
+          "Deployed application on Vercel",
+          "Conducted user testing with librarians",
+        ]
+      },
     ],
     technologies: {
       frontend: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
-      backend: [],
-      database: [],
-      deployment: ["Vercel", "Cloudflare"],
-      tools: ["Git", "Lighthouse", "WebPageTest", "Accessibility Insights"]
+      backend: ["Node.js", "Express", "PostgreSQL"],
+      database: ["PostgreSQL", "Upstash"],
+      tools: ["Git","GitHub", "ESLint"],
+      deployment: ["Vercel"]
     },
-    
     learnings: [
-      "Performance optimization requires attention to detail at every level",
-      "Accessibility should be built into the design process, not added later",
-      "Component-driven development improves maintainability and consistency",
-      "Modern CSS features like Grid and Flexbox enable complex layouts efficiently"
+      "User experience is crucial in library management systems to ensure ease of use for both staff and members",
+      "Automating repetitive tasks can significantly improve efficiency and reduce errors",
+      "Thorough testing is essential to identify and fix issues before deployment"
     ],
     screenshots: [
-      {
-        url: "/xora.PNG",
-        alt: "XORA Design Landing Page",
-        caption: "Clean, modern landing page with optimized performance"
-      }
+       {
+    url: "/lms1.PNG",
+    alt: "Login Page",
+    caption: "Login page for library staff and members"
+  },
+  {
+    url: "/lms2.PNG",
+    alt: "Book Details",
+    caption: "Showing Books and its details"
+  },
+  {
+    url: "/lms3.PNG",
+    alt: "Book List",
+    caption: "List of All books in the library"
+  }
     ],
     nextSteps: [
-      "Implement dark mode theme switching",
-      "Add advanced animations and micro-interactions",
-      "Create component library documentation",
-     
+      "Implement mobile application for on-the-go access",
+      "Add advanced reporting and analytics features",
+      "Integrate with external book databases for easy cataloging"
     ]
   }
 ];

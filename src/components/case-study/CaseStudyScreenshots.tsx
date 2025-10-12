@@ -41,25 +41,16 @@ export default function CaseStudyScreenshots({ caseStudy }: CaseStudyScreenshots
               className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
             >
               {/* Image */}
-              <div className="relative h-64 md:h-80 overflow-hidden">
-                <Image
-                  src={screenshot.url}
-                  alt={screenshot.alt}
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
-                />
-                
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-slate-900/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                
-                {/* Zoom Icon */}
-                <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="p-2 bg-white/90 backdrop-blur-sm rounded-lg">
-                    <FiZoomIn className="text-slate-700" size={20} />
-                  </div>
-                </div>
-              </div>
+             <div className="relative h-56 md:h-64 overflow-hidden">
+  <Image
+    src={screenshot.url}
+    alt={screenshot.alt}
+    width={680} 
+    height={580} 
+    className="object-cover transition-transform duration-700 group-hover:scale-105"
+    sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+  />
+</div>
 
               {/* Caption */}
               <div className="p-6">
@@ -88,12 +79,6 @@ export default function CaseStudyScreenshots({ caseStudy }: CaseStudyScreenshots
           className="mt-16 text-center"
         >
           <div className="bg-white rounded-2xl p-8 shadow-lg border border-slate-200">
-            <div className="p-4 bg-slate-100 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-              <FiImage className="text-slate-600" size={24} />
-            </div>
-            <h3 className="text-xl font-semibold text-slate-900 mb-2">
-              More Screenshots Available
-            </h3>
             <p className="text-slate-600 mb-6">
               Additional screenshots and detailed interface views are available in the live demo.
             </p>
@@ -107,6 +92,7 @@ export default function CaseStudyScreenshots({ caseStudy }: CaseStudyScreenshots
             >
               View Live Demo
             </motion.a>
+           
           </div>
         </motion.div>
       </div>
